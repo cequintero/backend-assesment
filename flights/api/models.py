@@ -29,7 +29,7 @@ class Leg(models.Model):
 
 class Itinerary(models.Model):
     id = models.CharField(max_length=255, primary_key=True)
-    price = models.CharField(max_length=20,validators=[RegexValidator(
+    price = models.CharField(max_length=20, validators=[RegexValidator(
         regex='^.\d+(\.\d{1,2})?$', message='invalid price')])
     agent = models.ForeignKey(Agent, on_delete=models.RESTRICT)
     legs = models.ManyToManyField(Leg)

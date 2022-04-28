@@ -3,6 +3,7 @@ from .models import Itinerary
 from rest_framework.views import APIView
 from .serializers import ItinerarySerializers
 
+
 class Itinerary_APIView(APIView):
 
     def get(self, request):

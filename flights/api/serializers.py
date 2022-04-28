@@ -1,11 +1,13 @@
 from rest_framework import serializers
 from api.models import Itinerary, Agent
 
+
 class AgentSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Agent
-        fields = ['name','rating']
+        fields = ['name', 'rating']
+
 
 class ItinerarySerializers(serializers.ModelSerializer):
 
@@ -23,4 +25,4 @@ class ItinerarySerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Itinerary
-        fields = ['id','legs', 'price','agent', 'agent_rating']
+        fields = ['id', 'legs', 'price', 'agent', 'agent_rating']
